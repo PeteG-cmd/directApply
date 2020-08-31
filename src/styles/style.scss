@@ -1,0 +1,127 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(255, 255, 255);
+}
+
+// NAVBAR
+
+.navbar {
+  background-color: rgb(250, 128, 128);
+
+  .logo {
+    max-height: 80px;
+    margin: 0 20px;
+  }
+
+  a {
+    color: white;
+  }
+
+  p {
+    color: white;
+    margin-right: 5%;
+  }
+
+  .dark {
+    color: black;
+  }
+}
+
+// SIGN UP FORM
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 5% auto;
+  text-align: center;
+  background-color: rgb(250, 224, 224);
+
+  input {
+    width: 80%;
+    
+  }
+}
+
+.mainTitle, .titleTwo {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-top: 20px;
+
+}
+
+// styling for error states. I have kept this outside the navbar styling as it may be used across forms elsewhere on the site, and will provide a more aligned feel to the site if it is the same.
+.error-fail {
+  border: 1px solid red;
+}
+
+.error-pass {
+  border: 1px solid green;
+}
+
+.error {
+  color: red;
+}
+
+input {
+  border: 1px solid;
+    border-radius: 5px;
+    line-height: 3em;
+}
+
+input:focus {
+  outline: none;
+}
+
+// FOOTER
+
+.footerLinks {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: rgb(51, 18, 18);
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+
+// MOBILE DISPLAY CHANGES
+
+@media screen and (max-width: 815px) {
+
+  .signUpForm {
+    width: 100%;
+
+    input {
+      width: 90%
+    }
+  }
+
+  .mainTitle, .titleTwo {
+    width: 95%
+  }
+
+  .navbar {
+    a, p {
+      color: black;
+    }
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    height: 100px;
+    p {
+      margin: 5px 0;
+    }
+  }
+ 
+
+}
